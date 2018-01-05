@@ -104,12 +104,12 @@ def train(cat_dim,noise_dim,batch_size,n_batch_per_epoch,nb_epoch,dset="seizure"
             print('Epoch %s/%s, Time: %s' % (e + 1, nb_epoch, time.time() - start))
             print()
             if e % 10 == 0:
-            _, p_Y_train = discriminator_model.predict(X_real_train, batch_size=X_real_train.shape[0])
-            acc_train = data_utils.accuracy(p_Y_train, to_categorical(Y_real_train))
-            print("Epoch: {} --- Train Accuracy: {}".format(e + 1, acc_train))
-            _, p_Y_test = discriminator_model.predict(X_real_test,batch_size=X_real_test.shape[0])
-            acc_test = data_utils.accuracy(p_Y_test, to_categorical(Y_real_test))
-            print("Epoch: {} --- Test Accuracy: {}".format(e +1 , acc_test))
+                _, p_Y_train = discriminator_model.predict(X_real_train, batch_size=X_real_train.shape[0])
+                acc_train = data_utils.accuracy(p_Y_train, to_categorical(Y_real_train))
+                print("Epoch: {} --- Train Accuracy: {}".format(e + 1, acc_train))
+                _, p_Y_test = discriminator_model.predict(X_real_test,batch_size=X_real_test.shape[0])
+                acc_test = data_utils.accuracy(p_Y_test, to_categorical(Y_real_test))
+                print("Epoch: {} --- Test Accuracy: {}".format(e +1 , acc_test))
             if e % 100 == 0:
                 gen_weights_path = os.path.join('../../models/IG/gen_weights.h5')
                 generator_model.save_weights(gen_weights_path, overwrite=True)
