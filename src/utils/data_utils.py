@@ -7,7 +7,8 @@ matplotlib.use('Agg')
 import matplotlib.pylab as plt
 from sklearn.utils import shuffle
 
-SEIZURE_DATA_PATH = "/Users/dapxichlo/Desktop/My_own/seizure_data"
+SEIZURE_DATA_PATH = "/home/andy/own/seizure_data"
+# SEIZURE_DATA_PATH = "/Users/dapxichlo/Desktop/My_own/seizure_data"
 
 
 def load_seizure():
