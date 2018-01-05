@@ -34,8 +34,8 @@ def train(cat_dim,noise_dim,batch_size,n_batch_per_epoch,nb_epoch,dset="seizure"
     try:
 
         # Create optimizers
-        opt_dcgan = Adam(lr=1E-3, beta_1=0.9, beta_2=0.999, epsilon=1e-08)
-        opt_discriminator = Adam(lr=2E-4, beta_1=0.9, beta_2=0.999, epsilon=1e-08)
+        opt_dcgan = Adam(lr=1E-6, beta_1=0.9, beta_2=0.999, epsilon=1e-08)
+        opt_discriminator = Adam(lr=2E-6, beta_1=0.9, beta_2=0.999, epsilon=1e-08)
         # opt_discriminator = SGD(lr=1E-4, momentum=0.9, nesterov=True)
 
         # Load generator model
