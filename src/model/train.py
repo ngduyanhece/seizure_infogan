@@ -64,7 +64,7 @@ def train(cat_dim,noise_dim,batch_size,n_batch_per_epoch,nb_epoch,dset="seizure"
             # progbar = generic_utils.Progbar(epoch_size)
             batch_counter = 1
             start = time.time()
-            print("Epoch: {}".format(e+1))
+            # print("Epoch: {}".format(e+1))
             for X_real_batch,Y_real_batch in zip(data_utils.gen_batch(X_real_train, batch_size),data_utils.gen_batch(to_categorical(Y_real_train), batch_size)):
 
                 # Create a batch to feed the discriminator model
